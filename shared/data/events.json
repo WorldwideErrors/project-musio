@@ -1,0 +1,19 @@
+[
+  {
+  "eventId": "010920261152",
+  "name": "Sample Event",
+  "description": "This is a sample event description.",
+    "queue": [
+        {
+        "requestId": 1,
+        "song": {
+            "songId": 1,
+            "title": "Sample Song",
+            "artist": "Sample Artist"
+        },
+        "createdAt": "2023-10-09T11:52:00Z",
+        "createdBy": "user456"
+      }
+    ]
+   }
+]
