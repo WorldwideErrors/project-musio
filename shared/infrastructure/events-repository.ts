@@ -1,20 +1,43 @@
+import fs from "fs/promises";
 import { events } from "../data/eventsData";
 import { Event } from "../domain/event";
 import { Request } from "../domain/request";
+import path from "path";
 
-export function getEventById(id: string): Event | null {
+const filePath = path.join(
+  process.cwd(),
+  "shared/data/events.json"
+)
+
+export async function getEvents(): Promise<Event[]> {
+  try {
+    const raw = await fs.readFile(filePath, "utf-8")
+    const parsed = JSON.parse(raw)
+    // Handle either array or object with { events: [...] }
+    if (Array.isArray(parsed)) return parsed
+    if (Array.isArray(parsed.events)) return parsed.events
+    return []
+  } catch {
+    return []
+  }
+}
+
+export async function getEventById(id: string): Promise<Event | null> {
+  const events = await getEvents()
   return events.find(e => e.eventId === id) ?? null
 }
 
-export function createEvent(event: Event): void {
-  events.push(event);
+export async function createEvent(event: Event): Promise<void> {
+  const events = await getEvents()
+  events.push(event)
+  await fs.writeFile(filePath, JSON.stringify({ events }, null, 2))
 }
 
-export function addRequestToEvent(eventId: string, request: Request): boolean {
-  const event = getEventById(eventId);
-  if (!event) {
-    return false;
-  }
-  event.queue.push(request);
-  return true;
-}
+// export function addRequestToEvent(eventId: string, request: Request): boolean {
+//   const event = getEventById(eventId);
+//   if (!event) {
+//     return false;
+//   }
+//   event.queue.push(request);
+//   return true;
+// }

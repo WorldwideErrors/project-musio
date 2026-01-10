@@ -1,4 +1,4 @@
 import rawData from "./events.json";
 import { Event } from "../domain/event";
 
-export const events: Event[] = rawData;
+export const events: Event[] = rawData.events as Event[]
