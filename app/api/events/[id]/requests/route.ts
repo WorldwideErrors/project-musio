@@ -22,10 +22,10 @@ export async function POST(
     }
 
     const newRequest: SongRequest = {
-        requestId: Date.now(),
         song,
         createdAt: new Date().toISOString(),
-        createdBy
+        createdBy,
+        played: false
     }
 
     await addRequestToEvent(id, newRequest);

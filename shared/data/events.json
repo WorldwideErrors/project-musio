@@ -4,14 +4,56 @@
       "eventId": "010920261152",
       "queue": [
         {
-          "requestId": 1,
           "song": {
-            "songId": 1,
-            "title": "Sample Song",
-            "artist": "Sample Artist"
+            "title": "One More Time",
+            "artist": "Daft Punk"
+          },
+          "createdAt": "2023-10-09T11:52:00Z",
+          "createdBy": "user456",
+          "played": true
+        },
+        {
+          "song": {
+            "title": "Bad Romance",
+            "artist": "Lady Gaga"
+          },
+          "createdAt": "2023-10-09T11:52:00Z",
+          "createdBy": "user456",
+          "played": true
+        },
+        {
+          "song": {
+            "title": "Rip It Up",
+            "artist": "Little Richard"
           },
           "createdAt": "2023-10-09T11:52:00Z",
           "createdBy": "user456"
+        },
+        {
+          "song": {
+            "title": "Born this way",
+            "artist": "Lady Gaga"
+          },
+          "createdAt": "2023-10-09T11:52:00Z",
+          "createdBy": "user456"
+        },
+        {
+          "song": {
+            "title": "All the good girls go to hell",
+            "artist": "Billie Eilish"
+          },
+          "createdAt": "2023-10-09T11:52:00Z",
+          "createdBy": "user456",
+          "played": true
+        },
+        {
+          "song": {
+            "title": "Kill this Love",
+            "artist": "Black Pink"
+          },
+          "createdAt": "2023-10-09T11:52:00Z",
+          "createdBy": "user456",
+          "played": true
         }
       ]
     },
@@ -21,6 +63,18 @@
     },
     {
       "eventId": "10012026-231300-9ce04bee-a2b2-4da1-8f3e-9e6055fd53b6",
+      "queue": []
+    },
+    {
+      "eventId": "12012026-114746-6d08686f-4b63-48f7-ad51-6d2bec0a2178",
+      "queue": []
+    },
+    {
+      "eventId": "12012026-124510-c921a806-f1d3-42b3-a190-6dfe3db501d3",
+      "queue": []
+    },
+    {
+      "eventId": "12012026-140658-ef6316a0-20ca-4af0-a4e7-8463c75bc659",
       "queue": []
     }
   ]

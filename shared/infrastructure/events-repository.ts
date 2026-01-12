@@ -1,5 +1,4 @@
 import fs from "fs/promises";
-import { events } from "../data/eventsData";
 import { Event } from "../domain/event";
 import { Request } from "../domain/request";
 import path from "path";
@@ -43,9 +42,25 @@ export async function addRequestToEvent(
   }
   const request: Request = {
     ...requestData,
-    requestId: Date.now()
   }
   event.queue.push(request);
-  
+
   return request;
+}
+
+const HOME_URL = "https://localhost:3000/";
+
+export function getHomeQrCodeUrl(): string {
+  const encodedUrl = encodeURIComponent(HOME_URL);
+
+  return `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodedUrl}`;
+}
+
+const EVENT_BASE_URL = "https://localhost:3000/event";
+
+export function getEventQrCodeUrl(eventId: string): string {
+  const eventUrl = `${EVENT_BASE_URL}/${eventId}/request`;
+  const encodedUrl = encodeURIComponent(eventUrl);
+
+  return `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodedUrl}&bgcolor=ea580c&color=000000&margin=10`;
 }
