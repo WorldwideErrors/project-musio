@@ -11,11 +11,9 @@ export async function PATCH(req: NextRequest) {
       return NextResponse.json({ error: "Missing eventId or requestIndex" }, { status: 400 });
     }
 
-    // 1️⃣ Get the event from your DB / repository
     const event: Event | null = await getEventById(eventId);
     if (!event) return NextResponse.json({ error: "Event not found" }, { status: 404 });
 
-    // 2️⃣ Update the specific request
     if (!event.queue[requestIndex]) {
       return NextResponse.json({ error: "Request not found" }, { status: 404 });
     }
