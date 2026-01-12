@@ -33,11 +33,19 @@ export async function createEvent(event: Event): Promise<void> {
   await fs.writeFile(filePath, JSON.stringify({ events }, null, 2))
 }
 
-// export function addRequestToEvent(eventId: string, request: Request): boolean {
-//   const event = getEventById(eventId);
-//   if (!event) {
-//     return false;
-//   }
-//   event.queue.push(request);
-//   return true;
-// }
+export async function addRequestToEvent(
+  eventId: string,
+  requestData: Omit<Request, "requestId">
+): Promise<Request | null> {
+  const event = await getEventById(eventId);
+  if (!event) {
+    return null;
+  }
+  const request: Request = {
+    ...requestData,
+    requestId: Date.now()
+  }
+  event.queue.push(request);
+  
+  return request;
+}
