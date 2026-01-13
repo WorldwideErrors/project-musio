@@ -34,11 +34,12 @@ export default async function EventPage({ params }: Props) {
         <div className="flex items-center justify-center rounded-xl border border-gray-200 dark:border-gray-700 
                 bg-white dark:bg-gray-800 p-6 shadow-sm dark:shadow-black/40">
           <Image 
-            src={`${qrUrl}&bgcolor=ea580c&color=000000`} 
+            src={`${qrUrl}&bgcolor=FFFFFF&color=000000`} 
             alt="Event QR Code" 
-            width={200} 
-            height={200}
+            width={300} 
+            height={300}
             className="rounded-lg"
+            priority={true}
           />
         </div>
 

@@ -3,9 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { Event } from "@/shared/domain/event";
 import { setRequestPlayed } from "@/shared/infrastructure/requests-repository";
 
-export async function PATCH(req: NextRequest) {
+export async function PATCH(request: NextRequest) {
   try {
-    const { eventId, requestIndex } = await req.json();
+    const { eventId, requestIndex } = await request.json();
 
     if (eventId === undefined || requestIndex === undefined) {
       return NextResponse.json({ error: "Missing eventId or requestIndex" }, { status: 400 });

@@ -1,9 +1,9 @@
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 import { createEvent, getEventById } from "@/shared/infrastructure/events-repository"
 import { Event } from "@/shared/domain/event"
 
-export async function GET(req: Request) {
-  const { searchParams } = new URL(req.url)
+export async function GET(request: NextRequest) {
+  const { searchParams } = new URL(request.url)
   const id = searchParams.get('id')
   
   if (!id) {

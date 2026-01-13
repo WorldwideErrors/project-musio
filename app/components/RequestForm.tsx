@@ -41,10 +41,11 @@ export default function RequestForm() {
       </h2>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-orange-400">
+        <label aria-label="label title" className="block text-sm font-medium text-gray-700 dark:text-orange-400">
           Song Title
         </label>
         <input
+          aria-label="input title"
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
@@ -54,10 +55,11 @@ export default function RequestForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 dark:text-orange-400 mt-4">
+        <label aria-label="label artist" className="block text-sm font-medium text-gray-700 dark:text-orange-400 mt-4">
           Artist
         </label>
         <input
+          aria-label="input artist"
           type="text"
           value={artist}
           onChange={(e) => setArtist(e.target.value)}
@@ -68,7 +70,7 @@ export default function RequestForm() {
 
       <button
         type="submit"
-        className="w-full rounded-lg bg-orange-500 transition-colors px-4 py-2 font-medium text-white transition hover:bg-orange-600 cursor-pointer mt-4"
+        className="w-full rounded-lg bg-orange-500 transition-colors px-4 py-2 font-medium text-black transition hover:bg-orange-600 cursor-pointer mt-4"
       >
         SUBMIT REQUEST
       </button>
