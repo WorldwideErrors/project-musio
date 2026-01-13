@@ -1,5 +1,6 @@
 import RequestForm from "@/app/components/RequestForm"
 import { Event } from "@/shared/domain/event"
+import { baseUrl } from "@/shared/utils/config"
 import { notFound } from "next/navigation"
 
 interface Props {
@@ -11,7 +12,7 @@ export default async function RequestPage({ params }: Props) {
 
   if (!id) return <div>No event ID provided</div>
 
-  const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/events?id=${id}`, { 
+  const response = await fetch(`${baseUrl}/api/events?id=${id}`, { 
     method: 'GET',
     cache: 'no-store'
   })
