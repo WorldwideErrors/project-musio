@@ -27,7 +27,8 @@
             "artist": "Little Richard"
           },
           "createdAt": "2023-10-09T11:52:00Z",
-          "createdBy": "user456"
+          "createdBy": "user456",
+          "played": true
         },
         {
           "song": {
