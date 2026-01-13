@@ -4,11 +4,17 @@ import { useState } from "react";
 import { MdPlaylistRemove } from "react-icons/md";
 import { Event } from "@/shared/domain/event";
 import { Request } from "@/shared/domain/request";
+import { Titillium_Web } from "next/font/google";
 
 interface Props {
   event: Event;
   requests: Event["queue"];
 }
+
+const titilium = Titillium_Web({
+  subsets: ["latin"],
+  weight: "700",
+})
 
 export default function MusicRequestsClient({ event, requests: initialRequests }: Props) {
   const [requests, setRequests] = useState<Event["queue"]>(initialRequests);
@@ -28,7 +34,6 @@ export default function MusicRequestsClient({ event, requests: initialRequests }
   };
 
   const unplayedRequests = requests.filter(req => !req.played);
-
   return (
     <div className="mx-20 my-10">
       {requests.length > 0 ? (
@@ -36,12 +41,12 @@ export default function MusicRequestsClient({ event, requests: initialRequests }
           {unplayedRequests.map((request: Request, index: number) => (
             <div
               key={index}
-              className="flex items-center gap-3 p-4 rounded-lg bg-gray-50 dark:bg-gray-700/50 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="flex items-center gap-3 p-4 shadow-sm rounded-lg bg-gray-50 dark:bg-gray-700/50 transition-colors hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
             >
-              <span className="text-2xl">🎵</span>
+              <span className="text-xl">{index + 1}</span>
               <div className="flex-1 min-w-0">
-                <p className="font-semibold text-gray-900 dark:text-orange-400 truncate">
-                  {request.song.title}
+                <p className={`font-semibold text-gray-900 dark:text-orange-400 truncate ${titilium.className}`}>
+                  {request.song.title.toUpperCase()}
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-400 truncate">
                   {request.song.artist}

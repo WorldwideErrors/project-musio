@@ -53,7 +53,7 @@ const HOME_URL = "https://localhost:3000/";
 export function getHomeQrCodeUrl(): string {
   const encodedUrl = encodeURIComponent(HOME_URL);
 
-  return `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodedUrl}`;
+  return `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodedUrl}&margin=10`;
 }
 
 const EVENT_BASE_URL = "https://localhost:3000/event";
@@ -62,5 +62,5 @@ export function getEventQrCodeUrl(eventId: string): string {
   const eventUrl = `${EVENT_BASE_URL}/${eventId}/request`;
   const encodedUrl = encodeURIComponent(eventUrl);
 
-  return `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodedUrl}&bgcolor=ea580c&color=000000&margin=10`;
+  return `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodedUrl}&margin=10`;
 }

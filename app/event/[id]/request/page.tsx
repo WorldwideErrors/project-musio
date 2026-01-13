@@ -25,6 +25,8 @@ export default async function RequestPage({ params }: Props) {
     <div>
       <h1>Event ID: {event.eventId}</h1>
       REQUEST PAGE
+
+      
     </div>
   )
 }

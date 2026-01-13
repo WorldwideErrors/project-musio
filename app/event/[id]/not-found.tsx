@@ -11,10 +11,10 @@ export default async function EventPage() {
       <div className="grid md:grid-cols-2 gap-6">
         <div className="flex items-center justify-center bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
           <Image 
-            src={qrUrl} 
+            src={`${qrUrl}&bgcolor=ea580c&color=000000`} 
             alt="Event QR Code" 
-            width={300} 
-            height={300}
+            width={200} 
+            height={200}
             className="rounded-lg"
           />
         </div>
