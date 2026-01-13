@@ -4,3 +4,4 @@ export const titilium = Titillium_Web({
   subsets: ["latin"],
   weight: "700",
 })
+

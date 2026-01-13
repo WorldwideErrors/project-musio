@@ -3,7 +3,7 @@
 import { Song } from "@/shared/domain/song"
 import { Request } from "@/shared/domain/request"
 import { useState } from "react"
-import { titilium } from "@/shared/fonts/utils"
+import { titilium } from "@/shared/utils/fonts"
 
 export default function RequestForm() {
   const [title, setTitle] = useState("")

@@ -1,4 +1,4 @@
-import { titilium } from "@/shared/fonts/utils"
+import { titilium } from "@/shared/utils/fonts"
 import { getHomeQrCodeUrl } from "@/shared/infrastructure/events-repository"
 import Image from "next/image"
 import Link from "next/link"

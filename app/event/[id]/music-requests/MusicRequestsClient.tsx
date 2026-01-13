@@ -4,7 +4,7 @@ import { useState } from "react";
 import { MdPlaylistRemove } from "react-icons/md";
 import { Event } from "@/shared/domain/event";
 import { Request } from "@/shared/domain/request";
-import { titilium } from "@/shared/fonts/utils";
+import { titilium } from "@/shared/utils/fonts";
 
 interface Props {
   event: Event;
@@ -15,7 +15,7 @@ export default function MusicRequestsClient({ event, requests: initialRequests }
   const [requests, setRequests] = useState<Event["queue"]>(initialRequests);
 
   const handleRequestPlayed = async (index: number) => {
-    const response = await fetch("/api/requests", {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/requests`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ eventId: event.eventId, requestIndex: index }),

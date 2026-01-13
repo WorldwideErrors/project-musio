@@ -1,5 +1,5 @@
 import { Event } from "@/shared/domain/event"
-import { titilium } from "@/shared/fonts/utils"
+import { titilium } from "@/shared/utils/fonts"
 import { getEventQrCodeUrl } from "@/shared/infrastructure/events-repository"
 import Image from "next/image"
 import { notFound } from "next/navigation"
@@ -15,7 +15,7 @@ export default async function EventPage({ params }: Props) {
     return <div className="text-center text-gray-500 mt-10">No event ID provided</div>
   }
 
-  const response = await fetch(`/api/events?id=${id}`, { 
+  const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/events?id=${id}`, { 
     method: 'GET',
     cache: 'no-store'
   })

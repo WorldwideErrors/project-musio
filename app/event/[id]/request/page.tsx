@@ -11,7 +11,7 @@ export default async function RequestPage({ params }: Props) {
 
   if (!id) return <div>No event ID provided</div>
 
-  const response = await fetch(`/api/events?id=${id}`, { 
+  const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/events?id=${id}`, { 
     method: 'GET',
     cache: 'no-store'
   })
