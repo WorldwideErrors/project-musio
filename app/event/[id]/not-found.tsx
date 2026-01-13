@@ -1,3 +1,4 @@
+import { titilium } from "@/shared/fonts/utils"
 import { getHomeQrCodeUrl } from "@/shared/infrastructure/events-repository"
 import Image from "next/image"
 import Link from "next/link"
@@ -28,9 +29,9 @@ export default async function EventPage() {
           </p>
           <Link 
             href="/"
-            className="mt-4 px-6 py-3 bg-orange-500 hover:bg-orange-600 dark:bg-orange-600 dark:hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+            className={`rounded-lg bg-orange-500 transition-colors px-4 py-2 font-medium text-white transition hover:bg-orange-600 cursor-pointer mt-4" ${titilium.className}`}
           >
-            Go Home
+            GO HOME
           </Link>
         </div>
       </div>

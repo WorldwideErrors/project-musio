@@ -4,17 +4,12 @@ import { useState } from "react";
 import { MdPlaylistRemove } from "react-icons/md";
 import { Event } from "@/shared/domain/event";
 import { Request } from "@/shared/domain/request";
-import { Titillium_Web } from "next/font/google";
+import { titilium } from "@/shared/fonts/utils";
 
 interface Props {
   event: Event;
   requests: Event["queue"];
 }
-
-const titilium = Titillium_Web({
-  subsets: ["latin"],
-  weight: "700",
-})
 
 export default function MusicRequestsClient({ event, requests: initialRequests }: Props) {
   const [requests, setRequests] = useState<Event["queue"]>(initialRequests);

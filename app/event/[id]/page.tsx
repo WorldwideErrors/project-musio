@@ -1,13 +1,8 @@
 import { Event } from "@/shared/domain/event"
+import { titilium } from "@/shared/fonts/utils"
 import { getEventQrCodeUrl } from "@/shared/infrastructure/events-repository"
-import { Fredoka, Titillium_Web } from "next/font/google"
 import Image from "next/image"
 import { notFound } from "next/navigation"
-
-const titilium = Titillium_Web({
-  subsets: ["latin"],
-  weight: "700",
-})
 
 interface Props {
   params: Promise<{ id: string }>

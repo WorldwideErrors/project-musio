@@ -1,3 +1,4 @@
+import RequestForm from "@/app/components/RequestForm"
 import { Event } from "@/shared/domain/event"
 import { notFound } from "next/navigation"
 
@@ -22,11 +23,8 @@ export default async function RequestPage({ params }: Props) {
   const event: Event = await response.json()
 
   return (
-    <div>
-      <h1>Event ID: {event.eventId}</h1>
-      REQUEST PAGE
-
-      
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <RequestForm />
     </div>
   )
 }

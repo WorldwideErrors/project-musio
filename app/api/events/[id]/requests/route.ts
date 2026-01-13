@@ -24,7 +24,6 @@ export async function POST(
     const newRequest: SongRequest = {
         song,
         createdAt: new Date().toISOString(),
-        createdBy,
         played: false
     }
 
