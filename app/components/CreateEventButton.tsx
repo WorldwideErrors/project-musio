@@ -1,11 +1,12 @@
 "use client"
+import { baseUrl } from "@/shared/utils/config"
 import { useRouter } from "next/navigation"
 
 export default function CreateEventButton() {
     const router = useRouter()
 
     const handleClick = async () => {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/events`, { method: "POST" })
+        const res = await fetch(`${baseUrl}/api/events`, { method: "POST" })
         const { eventId } = await res.json()
         router.push(`/event/${eventId}`)
     }
