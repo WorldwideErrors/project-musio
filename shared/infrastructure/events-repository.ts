@@ -34,16 +34,25 @@ export async function createEvent(event: Event): Promise<void> {
 
 export async function addRequestToEvent(
   eventId: string,
-  requestData: Omit<Request, "requestId">
+  requestData: Request
 ): Promise<Request | null> {
-  const event = await getEventById(eventId);
-  if (!event) {
+  const events = await getEvents();
+
+  const eventIndex = events.findIndex(e => e.eventId === eventId);
+  if (eventIndex === -1) {
     return null;
   }
+
   const request: Request = {
     ...requestData,
-  }
-  event.queue.push(request);
+  };
+
+  events[eventIndex].queue.push(request);
+
+  await fs.writeFile(
+    filePath,
+    JSON.stringify({ events }, null, 2)
+  );
 
   return request;
 }

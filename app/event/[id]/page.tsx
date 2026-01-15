@@ -4,12 +4,14 @@ import { getEventQrCodeUrl } from "@/shared/infrastructure/events-repository"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { baseUrl } from "@/shared/utils/config"
+import Link from "next/link"
 
 interface Props {
   params: Promise<{ id: string }>
 }
 
 export default async function EventPage({ params }: Props) {
+  
   const { id } = await params
 
   if (!id) {
@@ -89,7 +91,10 @@ export default async function EventPage({ params }: Props) {
               No songs requested yet...
             </p>
           )}
+          
         </div>
+        <Link href={`/event/14012026-004159-10b53c54-d8c2-4ad9-b4a3-a4eeb725a111/music-requests`}
+          className="btn text-center py-2 bg-orange-500 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-gray-800 cursor-pointer text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg">Go to Music Requests</Link>
       </div>
     </div>
   )

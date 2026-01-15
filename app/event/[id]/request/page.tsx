@@ -25,7 +25,7 @@ export default async function RequestPage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
-      <RequestForm />
+      <RequestForm event={event} />
     </div>
   )
 }

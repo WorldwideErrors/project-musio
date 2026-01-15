@@ -3,24 +3,14 @@ import { addRequestToEvent } from "@/shared/infrastructure/events-repository";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  request: NextRequest
 ) {
-  const { id } = await params;
 
-  if (!id) {
+  const { id: eventId, song } = await request.json();
+
+  if (!song?.title || !song?.artist) {
     return NextResponse.json(
-      { error: "No event ID provided" },
-      { status: 400 }
-    );
-  }
-
-  const body = await request.json();
-  const { song, createdBy } = body;
-
-  if (!song || !createdBy) {
-    return NextResponse.json(
-      { error: "Invalid request body" },
+      { error: "Invalid song data" },
       { status: 400 }
     );
   }
@@ -31,10 +21,7 @@ export async function POST(
     played: false,
   };
 
-  await addRequestToEvent(id, newRequest);
+  await addRequestToEvent(eventId, newRequest);
 
-  return NextResponse.json(
-    { message: "Request added successfully" },
-    { status: 201 }
-  );
+  return NextResponse.json(newRequest, { status: 201 });
 }

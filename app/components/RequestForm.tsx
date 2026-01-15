@@ -4,30 +4,35 @@ import { Song } from "@/shared/domain/song"
 import { Request } from "@/shared/domain/request"
 import { useState } from "react"
 import { titilium } from "@/shared/utils/fonts"
+import { baseUrl } from "@/shared/utils/config"
+import { useRouter } from "next/navigation"
 
-export default function RequestForm() {
+export default function RequestForm(props : { event: { eventId: string } }) {
   const [title, setTitle] = useState("")
   const [artist, setArtist] = useState("")
 
+  //Voor demo  
+  const router = useRouter()
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    const song: Song = {
-      title,
-      artist,
-    }
+    const song: Song = { title, artist };
 
-    const request: Request = {
-      song,
-      createdAt: new Date().toISOString(),
-      played: false,
-    }
+    fetch(`/api/events/${props.event.eventId}/requests`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: props.event.eventId, song }),
+    });
 
-    console.log("Request created:", request)
-
+    
 
     setTitle("")
     setArtist("")
+  }
+
+  const handleDemo = () => {
+    router.push(`/event/14012026-004159-10b53c54-d8c2-4ad9-b4a3-a4eeb725a111`)
   }
 
   return (
@@ -69,7 +74,8 @@ export default function RequestForm() {
       </div>
 
       <button
-        type="submit"
+        // type="submit"
+        onClick={handleDemo}
         className="w-full rounded-lg bg-orange-500 transition-colors px-4 py-2 font-medium text-black transition hover:bg-orange-600 cursor-pointer mt-4"
       >
         SUBMIT REQUEST

@@ -111,7 +111,45 @@
     },
     {
       "eventId": "14012026-003510-fb429018-30bb-479a-bd6b-deb3907afa7f",
-      "queue": []
+      "queue": [
+        {
+          "song": {
+            "title": "Test",
+            "artist": "test"
+          },
+          "createdAt": "2026-01-15T09:21:16.526Z",
+          "played": false
+        },
+        {
+          "song": {
+            "title": "Test",
+            "artist": "test"
+          },
+          "createdAt": "2026-01-15T09:23:13.286Z",
+          "played": false
+        },
+        {
+          "song": {
+            "title": "test",
+            "artist": "test"
+          },
+          "createdAt": "2026-01-15T09:23:50.079Z",
+          "played": false
+        }
+      ]
+    },
+    {
+      "eventId": "14012026-004159-10b53c54-d8c2-4ad9-b4a3-a4eeb725a111",
+      "queue": [
+        {
+          "song": {
+            "title": "God's Menu",
+            "artist": "Stray Kids"
+          },
+          "createdAt": "2026-01-15T08:53:34.153Z",
+          "played": false
+        }
+      ]
     }
   ]
 }
