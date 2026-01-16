@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #e4e4e4;
+  --background: linear-gradient(0deg, #fa3e00 0%, #fa7900 25%, #faab00 50%, #fa7900 75%, #fa3e00 100%);
   --foreground: #171717;
 }
 
@@ -36,8 +36,10 @@ h1{
 }
 
 .bg-musio {
-  background-image: url("/bg-musio.png");
-  background-size: contain;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("/musio-banner.webp");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

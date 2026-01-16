@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { MdPlaylistRemove } from "react-icons/md";
+import { MdPlaylistAddCheck } from "react-icons/md";
 import { Event } from "@/shared/domain/event";
 import { Request } from "@/shared/domain/request";
 import { titilium } from "@/shared/utils/fonts";
 import { baseUrl } from "@/shared/utils/config";
+import { IoMdTrash } from "react-icons/io";
 
 interface Props {
   event: Event;
@@ -41,25 +42,41 @@ export default function MusicRequestsClient({ event, requests: initialRequests }
             >
               <span className="text-xl">{index + 1}</span>
               <div className="flex-1 min-w-0">
-                <p className={`font-semibold text-gray-900 dark:text-orange-400 truncate ${titilium.className}`}>
+                <p className={`font-semibold text-lg text-gray-900 dark:text-orange-400 truncate ${titilium.className}`}>
                   {request.song.title.toUpperCase()}
                 </p>
-                <p className="text-sm text-gray-600 dark:text-gray-400 truncate">
+                <p className="text-md text-gray-600 dark:text-gray-400 truncate">
                   {request.song.artist}
                 </p>
               </div>
               <button
-                className="btn px-4 py-2 bg-orange-500 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-gray-800 cursor-pointer text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+                className="btn px-4 py-2 bg-orange-500 dark:bg-gray-900 hover:bg-green-600 dark:hover:bg-gray-800 cursor-pointer 
+                hover:border-2 hover:border-green-600  font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
                 onClick={() => handleRequestPlayed(index)}
                 disabled={request.played}
               >
                 <div className="relative group cursor-pointer">
-                    <MdPlaylistRemove className="text-white dark:text-orange-500 text-3xl" />
+                    <MdPlaylistAddCheck className="text-white dark:text-orange-500 text-3xl" />
                     <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2
                                     bg-gray-800 text-white text-sm rounded px-2 py-1
                                     opacity-0 group-hover:opacity-100 transition-opacity
                                     whitespace-nowrap pointer-events-none">
                     Set as played
+                    </span>
+                </div>
+              </button>
+              <button
+                className="btn px-4 py-2 bg-orange-500 dark:bg-gray-900 hover:bg-red-600 dark:hover:bg-gray-800 cursor-pointer hover:border-red-600 hover:border-1 text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+                onClick={() => handleRequestPlayed(index)}
+                disabled={request.played}
+              >
+                <div className="relative group cursor-pointer">
+                    <IoMdTrash className="text-white dark:text-orange-500 text-3xl" />
+                    <span className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2
+                                    bg-gray-800 text-white text-sm rounded px-2 py-1
+                                    opacity-0 group-hover:opacity-100 transition-opacity
+                                    whitespace-nowrap pointer-events-none">
+                    Remove from queue
                     </span>
                 </div>
               </button>
