@@ -55,15 +55,21 @@ app/
  ├─ api/
  │   └─ events/
  │       └─ route.ts
+ │   └─ events/[id]/requests
+ │       └─ route.ts
+ │   └─ request/
+ │       └─ route.ts
  ├─ pages / components
-domain/
- ├─ event.ts
- ├─ request.ts
- └─ song.ts
 shared/
  ├─ data/
  │   └─ events.json
- └─ repositories / services
+ ├─ repositories
+ │   └─ events-repository.ts
+ │   └─ requests-repository.ts
+ └─ domain/
+     ├─ event.ts
+     ├─ request.ts
+     └─ song.ts
 ```
 
 ## Bekende beperkingen & verbeterpunten
