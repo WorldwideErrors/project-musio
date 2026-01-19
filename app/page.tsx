@@ -1,6 +1,5 @@
 import HeaderSection from "./components/HeaderSection";
 import CreateEventButton from "./components/CreateEventButton";
-import Link from "next/link";
 
 export default function Home() {
   return (
