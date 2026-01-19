@@ -1,5 +1,6 @@
 import HeaderSection from "./components/HeaderSection";
 import CreateEventButton from "./components/CreateEventButton";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
     </div>
     <div className="p-4">
       <CreateEventButton/>
+    </div>
+    <div className="p-4">
+      
     </div>
     <div className="container mx-auto px-4 py-10 max-w-6xl">
       <div className="grid md:grid-cols-3 gap-6">

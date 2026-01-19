@@ -1,178 +1,134 @@
 {
   "events": [
     {
-      "eventId": "010920261152",
+      "eventId": "16012026-125501-a52fbc8b-8fd4-445a-ab14-8f3fc2e98db2",
       "queue": [
         {
+          "id": "dc11a735-30e8-4af1-a8d2-8fe64304e029",
           "song": {
-            "title": "One More Time",
-            "artist": "Daft Punk"
+            "title": "Im a slave 4 u",
+            "artist": "britney spears"
           },
-          "createdAt": "2023-10-09T11:52:00Z",
+          "createdAt": "2026-01-16T11:55:20.967Z",
           "played": false
         },
         {
+          "id": "c9fd5d6d-fe31-4872-b0b1-c50c1a7348f1",
           "song": {
-            "title": "Bad Romance",
-            "artist": "Lady Gaga"
+            "title": "born this way",
+            "artist": "lady gaga"
           },
-          "createdAt": "2023-10-09T11:52:00Z",
+          "createdAt": "2026-01-16T11:55:28.087Z",
+          "played": false
+        },
+        {
+          "id": "ce62b068-3767-4165-97e4-9d36886be4b4",
+          "song": {
+            "title": "boom bayah",
+            "artist": "black pink"
+          },
+          "createdAt": "2026-01-16T11:55:35.787Z",
           "played": true
         },
         {
+          "id": "d1783f72-0af5-4121-8ac9-5209e9ad05d8",
           "song": {
-            "title": "Rip It Up",
-            "artist": "Little Richard"
+            "title": "boom bayah",
+            "artist": "black pink"
           },
-          "createdAt": "2023-10-09T11:52:00Z",
+          "createdAt": "2026-01-16T11:55:48.910Z",
           "played": true
         },
         {
+          "id": "8b6e13b4-03d2-4595-ab1f-6e2cdc874f8f",
           "song": {
-            "title": "Born this way",
-            "artist": "Lady Gaga"
+            "title": "Everytime",
+            "artist": "Britney Spears"
           },
-          "createdAt": "2023-10-09T11:52:00Z",
-          "played": true
-        },
-        {
-          "song": {
-            "title": "All the good girls go to hell",
-            "artist": "Billie Eilish"
-          },
-          "createdAt": "2023-10-09T11:52:00Z",
-          "played": true
-        },
-        {
-          "song": {
-            "title": "One More Time",
-            "artist": "Daft Punk"
-          },
-          "createdAt": "2023-10-09T11:52:00Z",
-          "played": false
-        },
-        {
-          "song": {
-            "title": "Bad Romance",
-            "artist": "Lady Gaga"
-          },
-          "createdAt": "2023-10-09T11:52:00Z",
-          "played": false
-        },
-        {
-          "song": {
-            "title": "Kill this Love",
-            "artist": "Black Pink"
-          },
-          "createdAt": "2023-10-09T11:52:00Z",
-          "played": false
-        },
-        {
-          "song": {
-            "title": "Boom Bayah",
-            "artist": "Black Pink"
-          },
-          "createdAt": "2023-10-09T11:52:00Z",
-          "played": false
-        },
-        {
-          "song": {
-            "title": "dancing queen",
-            "artist": "abba"
-          },
-          "createdAt": "2026-01-15T20:11:09.840Z",
-          "played": false
-        },
-        {
-          "song": {
-            "title": "Jouw Idee",
-            "artist": "Roxy Dekker"
-          },
-          "createdAt": "2026-01-16T00:10:45.168Z",
+          "createdAt": "2026-01-16T15:45:32.401Z",
           "played": false
         }
       ]
     },
     {
-      "eventId": "10012026-230337-2c688688-3bbc-4a2e-8bb6-596371d7fd5b",
-      "queue": []
-    },
-    {
-      "eventId": "10012026-231300-9ce04bee-a2b2-4da1-8f3e-9e6055fd53b6",
-      "queue": []
-    },
-    {
-      "eventId": "12012026-114746-6d08686f-4b63-48f7-ad51-6d2bec0a2178",
-      "queue": []
-    },
-    {
-      "eventId": "12012026-124510-c921a806-f1d3-42b3-a190-6dfe3db501d3",
-      "queue": []
-    },
-    {
-      "eventId": "12012026-140658-ef6316a0-20ca-4af0-a4e7-8463c75bc659",
-      "queue": []
-    },
-    {
-      "eventId": "12012026-143659-430f367a-c049-45e4-8e1d-cad8d1c854c2",
-      "queue": []
-    },
-    {
-      "eventId": "13012026-150008-298e4a48-c75e-475d-8c63-cfa318f97259",
-      "queue": []
-    },
-    {
-      "eventId": "14012026-001459-865a95f8-41b4-4621-9e56-0ea514c7949b",
-      "queue": []
-    },
-    {
-      "eventId": "14012026-003510-fb429018-30bb-479a-bd6b-deb3907afa7f",
-      "queue": []
-    },
-    {
-      "eventId": "14012026-004159-10b53c54-d8c2-4ad9-b4a3-a4eeb725a111",
+      "eventId": "16012026-164853-353f8157-1cd5-41a9-9eea-a22b5ceb20eb",
       "queue": [
         {
+          "id": "2319d6ab-edde-45f2-a4ef-3e9efdf8e3a3",
           "song": {
-            "title": "Judas",
-            "artist": "Lady Gaga"
+            "title": "Born this Way",
+            "artist": "Lady gaga"
           },
-          "createdAt": "2026-01-15T08:53:34.153Z",
+          "createdAt": "2026-01-16T15:53:32.035Z",
           "played": false
-        }
-      ]
-    },
-    {
-      "eventId": "15012026-120435-f3ff9954-9434-46a1-9b72-7d649b7ab30f",
-      "queue": [
+        },
         {
+          "id": "49b74813-5095-4701-bff7-2f605831584b",
+          "song": {
+            "title": "Hot n cold",
+            "artist": "katy perry"
+          },
+          "createdAt": "2026-01-16T15:53:42.110Z",
+          "played": false
+        },
+        {
+          "id": "f7b20984-0260-49f6-bf5e-ec2c06fa8fab",
+          "song": {
+            "title": "Dark Horse",
+            "artist": "K. Perry"
+          },
+          "createdAt": "2026-01-16T15:53:51.913Z",
+          "played": false
+        },
+        {
+          "id": "02a6ac74-e921-4e38-aab4-2701a341a90f",
+          "song": {
+            "title": "Dancing queen",
+            "artist": "ABBA"
+          },
+          "createdAt": "2026-01-16T15:54:04.227Z",
+          "played": false
+        },
+        {
+          "id": "8221f31d-e70e-4437-96b3-98cf8b2d6d04",
+          "song": {
+            "title": "Maak me gek",
+            "artist": "Gerard Joling"
+          },
+          "createdAt": "2026-01-16T15:54:21.945Z",
+          "played": false
+        },
+        {
+          "id": "da64eeb2-5a66-46f0-ade6-57cd774077e4",
+          "song": {
+            "title": "Bohemian Rapsody",
+            "artist": "Queen"
+          },
+          "createdAt": "2026-01-16T15:54:59.612Z",
+          "played": false
+        },
+        {
+          "id": "ee45a9bb-507c-4894-a20f-9cfd987f9689",
+          "song": {
+            "title": "Baby",
+            "artist": "Justin Bieber"
+          },
+          "createdAt": "2026-01-16T15:56:30.993Z",
+          "played": true
+        },
+        {
+          "id": "7f1c80b1-bafb-4be9-839f-bec9955ac68b",
           "song": {
             "title": "Ja",
             "artist": "Bizzey"
           },
-          "createdAt": "2026-01-15T11:05:18.701Z",
+          "createdAt": "2026-01-16T15:56:42.518Z",
           "played": true
-        },
-        {
-          "song": {
-            "title": "Baby",
-            "artist": "Justin bieber"
-          },
-          "createdAt": "2026-01-15T11:06:56.190Z",
-          "played": false
-        },
-        {
-          "song": {
-            "title": "The Fate of Ophelia",
-            "artist": "Taylor Swift"
-          },
-          "createdAt": "2026-01-15T11:08:32.660Z",
-          "played": false
         }
       ]
     },
     {
-      "eventId": "15012026-212043-36d21662-771b-43aa-92cf-f016f4cefd22",
+      "eventId": "18012026-160222-bc44c1bd-fba7-40ab-9768-8ec55cafbcf2",
       "queue": []
     }
   ]

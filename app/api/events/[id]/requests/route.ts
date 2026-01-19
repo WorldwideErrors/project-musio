@@ -1,5 +1,6 @@
 import { Request as SongRequest } from "@/shared/domain/request";
 import { addRequestToEvent } from "@/shared/infrastructure/events-repository";
+import { randomUUID } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(
@@ -16,6 +17,7 @@ export async function POST(
   }
 
   const newRequest: SongRequest = {
+    id: randomUUID(),
     song,
     createdAt: new Date().toISOString(),
     played: false,

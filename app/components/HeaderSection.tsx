@@ -6,7 +6,7 @@ type headerProps = {
 export default function HeaderSection({ title, subtitle }: headerProps) {
     return (
         <section className="relative items-center justify-center rounded-xl border border-black dark:border-black 
-                bg-white dark:bg-black p-6 shadow-sm dark:shadow-black/40 bg-musio ">
+                bg-white dark:bg-black p-6 py-18 shadow-sm dark:shadow-black/40 bg-musio ">
           <div className="max-w-7xl mx-auto p-4">
             <div className="text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-orange-700 dark:text-orange-500 mb-6 tracking-wider ">

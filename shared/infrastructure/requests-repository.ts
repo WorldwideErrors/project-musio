@@ -18,24 +18,27 @@ export async function getOpenRequestsByEvent(event: Event): Promise<Request[] | 
   return openRequests.length > 0 ? openRequests : null;
 }
 
-export async function setRequestPlayed(event: Event, index: number): Promise<Event> {
-  if (!event.queue[index]) {
-    throw new Error("Request not found at index " + index);
+export async function setRequestPlayed(
+  event: Event,
+  requestId: string
+): Promise<Event> {
+  const requestExists = event.queue.some(r => r.id === requestId);
+  if (!requestExists) {
+    throw new Error("Request not found: " + requestId);
   }
 
   const updatedEvent: Event = {
     ...event,
-    queue: event.queue.map((req, i) =>
-      i === index ? { ...req, played: true } : req
+    queue: event.queue.map(req =>
+      req.id === requestId ? { ...req, played: true } : req
     ),
   };
 
   const events = await getEvents();
   const eventIndex = events.findIndex(e => e.eventId === event.eventId);
-  if (eventIndex === -1) throw new Error("Event not found in storage");
+  if (eventIndex === -1) throw new Error("Event not found");
 
   events[eventIndex] = updatedEvent;
-
   await writeEvents(events);
 
   return updatedEvent;
